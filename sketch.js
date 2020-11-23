@@ -105,18 +105,11 @@ function draw() {
 
   fill(0, 0, 0);
   textSize(20);
-  text("Score: " + score, 450, 20);
-  text("High Score: " + localStorage["High Score"], 280, 20);
+  text("Score: " + score, width-200, 20);
+  text("High Score: " + localStorage["High Score"], width-400, 20);
 
   if (gamestate === START) {
     trex.velocityY = 0;
-    fill(0, 0, 0);
-    textSize(30);
-    text("TREX GAME", 200, 50);
-    textSize(15);
-    text("from Ayush", 380, 50);
-    textSize(20);
-    text("Press space to start the game and to jump", 110, 100);
 
     if (keyWentDown("space")|| (touches.length>0)) {
       Jump.play();
